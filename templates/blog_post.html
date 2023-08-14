@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css"> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"> -->
+<link rel="stylesheet" href="/static/atom-one-dark.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script> -->
+
+
+<script>hljs.highlightAll();</script>
+
+<main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white ">
+    <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
+      <article class="prose mx-auto w-full max-w-6xl format format-sm sm:format-base lg:format-lg format-blue ">
+        <header class="mb-4 lg:mb-6 not-format">
+          <address class="flex items-center mb-6 not-italic">
+            <div class="inline-flex items-center mr-3 text-sm text-gray-900 ">
+              <div>
+                <!-- <a href="./index.html" rel="author" class="text-xl font-bold text-gray-900 ">ScratchDB</a> -->
+                <p class="text-base font-light text-gray-500 "><time pubdate datetime="{{post.date}}"
+                    title="{{post.date}}">{{post.date}}</time></p>
+              </div>
+            </div>
+          </address>
+          <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl ">
+            {{post.title}}
+            </h1>
+        </header>
+
+
+        {{post.html |safe }}
+<!-- 
+        <p class="text-2xl my-4">"ScratchDB automatically creates tables from our JSON."</p>
+        <p>(testing margins) Placeholder placeholder placeholder placeholder placeholder placeholder placeholder
+          placeholder placeholder
+          placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder
+          placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder
+          placeholder placeholder</p>
+        <p class="text-2xl my-4">"We never have to worry about provisioning server capacity again."</p>
+        <p>Placeholder</p>
+        <p class="lead mb-12"></p> -->
+      </article>
+    </div>
+  </main>
+
+  {% endblock %}
