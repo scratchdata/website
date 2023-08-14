@@ -10,7 +10,7 @@
             Serverless Analytics.</h1>
           <p class="mb-14 font-light text-gray-500 md:text-lg">Build analytics with zero infrastructure.<br>Automatically
             create and optimize tables from JSON.</p>
-          <form action="#" class="mx-auto max-w-screen-sm">
+          <form action="/signup" method="post" class="mx-auto max-w-screen-sm">
             <div class="flex items-center mb-3">
               <div class="relative mr-3 w-full">
                 <label for="member_email" class="hidden mb-2 text-sm font-medium text-gray-900">Email
@@ -24,7 +24,7 @@
                 </div>
                 <input
                   class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="Enter your email" type="email" name="member[email]" id="member_email" required="">
+                  placeholder="Enter your email" type="email" name="email" id="member_email" required="">
               </div>
               <div>
                 <input type="submit" value="Join Beta"
@@ -188,7 +188,7 @@
         <p class="mb-8 font-light text-white md:text-lg lg:text-xl sm:px-16 xl:px-48 ">Our cloud hosted beta is open!
           Let us know if you're interested or want to chat.</p>
         <div class="flex w-fit mx-auto">
-          <form action="#" class="flex w-full max-w-sm lg:ml-auto">
+          <form method="post" action="/signup" class="flex w-full max-w-sm lg:ml-auto">
             <div class="relative w-full">
               <label for="email" class="hidden mb-2 text-sm font-medium text-gray-900">Email
                 address</label>
@@ -199,7 +199,7 @@
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                 </svg>
               </div>
-              <input type="email" id="email"
+              <input type="email" id="email" name="email"
                 class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-l-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                 placeholder="Your email" required>
             </div>
