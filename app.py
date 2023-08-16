@@ -8,6 +8,8 @@ import datetime
 from pprint import pprint
 import requests
 import os
+import logging
+import sys
 
 app = Flask(__name__)
 app.register_blueprint(blog_blueprint)
@@ -15,6 +17,15 @@ app.register_blueprint(blog_blueprint)
 
 @app.get("/")
 def index():
+    logging.info("hello")
+    logging.warning("world")
+    logging.warning('{"a":"b"}')
+    app.logger.info("app info")
+    app.logger.warning("app warning")
+    app.logger.warning('{"c":"d"}')
+    print("stdout log")
+    print('{"stdout":"json"}')
+    print('{"stderr":"json"}', file=sys.stderr)
     return render_template("index.html")
 
 @app.post("/signup")
