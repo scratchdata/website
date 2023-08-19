@@ -3,7 +3,7 @@ date: 2023-08-18
 publishdate: 2023-08-18
 title: Forwarding Fly.io Logs to Clickhouse
 summary: How to send logs from Fly.io into Clickhouse and query them with SQL
-tags: ["Engineering"]
+tags: ["Recipes"]
 ---
 
 This guide shows how we ship logs into Clickhouse from Fly.io.

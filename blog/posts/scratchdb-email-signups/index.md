@@ -3,7 +3,7 @@ date: 2023-08-21
 publishdate: 2023-08-21
 title: Capture Form Responses to Google Sheets
 summary: How to save form submissions to Clickhouse
-tags: ["Engineering"]
+tags: ["Recipes"]
 ---
 
 Often I just want to set up a basic form, capture user responses, and view the results
