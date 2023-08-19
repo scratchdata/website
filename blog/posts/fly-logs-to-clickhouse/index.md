@@ -61,7 +61,7 @@ From here you can query your logs with regular SQL.
 ``` bash
 curl -G https://api.scratchdb.com/query
     -d "format=html"
-    -d "q=select * from logs "
+    -d "q=select * from logs"
     -H 'X-API-KEY: your_api_key'
 ```
 
