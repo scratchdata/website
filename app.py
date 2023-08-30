@@ -44,6 +44,9 @@ def stripe_payment(stripe_customer_id):
 def index():
     return render_template("index.html")
 
+@app.get("/docs")
+def docs():
+    return render_template("docs.html")
 
 @app.post("/signup")
 def signup():

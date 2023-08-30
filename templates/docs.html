@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="/static/atom-one-dark.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+<main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white ">
+    <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
+      <article class="prose mx-auto w-full max-w-6xl format format-sm sm:format-base lg:format-lg format-blue ">
+
+        <h1>API Documentation</h1>
+
+        Scratch has 2 endpoints: one to query data and another to insert. 
+        
+        The base URL for the API is:
+
+        <pre class="highlight"><code class="language-bash">https://api.scratchdb.com</code></pre>
+
+        There are multiple ways to authenticate with your API key:
+
+        <ol>
+            <li>Use the <code>X-API-KEY</code> header</li>
+
+            <li>Add <code>?api_key=...</code> as a query param</li>
+        </ol>
+
+        <h2>Querying Data</h2>
+
+        You can run SQL queries on your data using <code>/query?q=YOUR SQL QUERY</code>.
+        This will return data as JSON. We also support returning data as an HTML
+        table by adding <code>?format=html</code> to the query.
+
+        <pre class="highlight"><code class="language-bash">
+curl 'https://api.scratchdb.com/query?q=select * from events' \
+     -H "X-API-KEY: your_api_key"
+        </code></pre>
+
+        <h2>Inserting Data</h2>
+        
+        <p>You can post a JSON document or JSON array to insert data. We automatically create tables and
+        columns based on your JSON. We also batch data and insert it asynchrously, so you can stream
+        data into the system without worrying about database performance.</p>
+
+        <pre class="highlight"><code class="language-bash">
+curl -X POST https://api.scratchdb.com/data \
+     -H "X-API-KEY: demo" \
+     -H "X-SCRATCHDB-TABLE: events" \
+     -d '{"user": "jay", "event": "click"}'
+        </code></pre>
+
+      </article>
+    </div>
+  </main>
+
+  {% endblock %}
