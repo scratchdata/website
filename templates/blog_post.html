@@ -45,6 +45,39 @@
         <p class="lead mb-12"></p> -->
       </article>
     </div>
+
+    <br><br>
+    <section class="bg-white">
+      <div class="px-4 py-8 mx-auto text-center lg:py-16 lg:px-12 bg-blue-600 w-full shadow-xl ">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Get
+          Access</h2>
+        <p class="mb-8 font-light text-white md:text-lg lg:text-xl sm:px-16 xl:px-48 ">
+          Like what you read? We're applying all of these learnings to build 
+          ScratchDB. Let's chat!
+        </p>
+        <div class="flex w-fit mx-auto">
+          <form method="post" action="/signup" class="flex w-full max-w-sm lg:ml-auto">
+            <div class="relative w-full">
+              <label for="email" class="hidden mb-2 text-sm font-medium text-gray-900">Email
+                address</label>
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                </svg>
+              </div>
+              <input type="email" id="email" name="email"
+                class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-l-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Your email" required>
+            </div>
+            <button type="submit"
+              class="py-3 px-5 w-32 text-sm text-center text-white rounded-r-lg border cursor-pointer bg-blue-600 border-white-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300">Join
+              Beta</button>
+          </form>
+        </div>
+    </section>
+
   </main>
 
   {% endblock %}

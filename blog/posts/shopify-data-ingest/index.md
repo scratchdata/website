@@ -6,7 +6,7 @@ summary: How to use Shopify webhooks to ingest activity to a database
 tags: ["Recipes"]
 ---
 
-One thing users ahve told us is that Shopify users have trouble exporting all of their
+One thing users have told us is that Shopify users have trouble exporting all of their
 data out of the platform and into a database. We've solved this using Shopify webhooks and 
 our tool to ingest data to Clickhouse.
 
