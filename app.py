@@ -48,6 +48,10 @@ def index():
 def docs():
     return render_template("docs.html")
 
+@app.get("/customers")
+def customers():
+    return render_template("customers.html")
+
 @app.post("/signup")
 def signup():
     email = request.form.get("email", "")
