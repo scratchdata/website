@@ -52,12 +52,16 @@ def docs():
 def customers():
     return render_template("customers.html")
 
+@app.get("/demo")
+def demo():
+    return render_template("demo.html")
+
 @app.post("/signup")
 def signup():
     email = request.form.get("email", "")
     payload = {"email": email}
     requests.post(
-        "https://demo.scratchdb.com/data?table=email_signup",
+        "https://api.scratchdb.com/data?table=email_signup",
         headers={"X-API-KEY": os.environ.get("SCRATCHDB_API_KEY")},
         json=payload,
     )

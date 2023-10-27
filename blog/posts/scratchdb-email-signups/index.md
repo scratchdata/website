@@ -9,7 +9,7 @@ tags: ["Recipes"]
 Often I just want to set up a basic form, capture user responses, and view the results
 in a spreadsheet. Here's a recipe to do that with ScratchDB. In fact, this is the exact code
 we use [on this website](https://github.com/scratchdata/website/blob/main/app.py#L24-L29) for
-users who sign up for our beta.
+users who sign up.
 
 There are a lot of other products that let you capture user surveys, sign-ups, email addresses,
 etc. But they all require me to do learn their platform, pick a plan, and do an "integration". 
