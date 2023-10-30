@@ -39,6 +39,19 @@ Postgres, or MySQL database connectors.
 https://api.scratchdb.com/query?q=select * from stripe&api_key=YOUR_KEY
 ```
 
+The output looks like this:
+
+``` json
+[
+  {
+    "data_object_amount": "2000",
+    "data_object_shipping_address_line2": "null",
+    "data_object_payment_method_details_card_exp_month": "",
+    ...etc...
+  }
+]
+```
+
 ## What is ScratchDB?
 
 [ScratchDB](https://github.com/scratchdata/ScratchDB) is an open-source 
