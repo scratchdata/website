@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  scratchdata-ui:
+    image: scratchdata-ui
+    container_name: scratchdata-ui
+    ports:
+      - 8000:8000
+    
