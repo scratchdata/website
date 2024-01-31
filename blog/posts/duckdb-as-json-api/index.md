@@ -65,7 +65,7 @@ I noticed that DuckDB does have the ability to [write to stdout](https://duckdb.
 The syntax looks like this:
 
 ``` sql
-"COPY (SELECT * FROM t) TO '/dev/stdout' WITH (FORMAT 'json', ARRAY true)"
+COPY (SELECT * FROM t) TO '/dev/stdout' WITH (FORMAT 'json', ARRAY true)
 ```
 
 Does this also work with named pipes? It does! Here was a quick CLI test:
@@ -80,12 +80,11 @@ to our Go program:
 
 
 ``` go
-func Query(w http.ResponseWriter, r *http.Request) {
-
+func QueryHandler(w http.ResponseWriter, r *http.Request) {
   // Have DuckDB write to our pipe. This will block until data is read, so run
   // it in a separate goroutine
   go func() {
-    db.Exec("COPY (SELECT * FROM t) TO 'p.pipe' (FORMAT JSON, ARRAY true) ")
+    db.Exec("COPY (SELECT * FROM t) TO 'p.pipe' (FORMAT JSON, ARRAY true)")
   }()
 
   // Open pipe for reading
