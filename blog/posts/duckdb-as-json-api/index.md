@@ -1,8 +1,8 @@
 ---
 date: 2024-01-29
 publishdate: 2024-01-29
-title: DuckDB as a REST API with Named Pipes
-summary: How to use named pipes to turn DuckDB into a RESTful API
+title: How to use DuckDB as a REST API
+summary: We used mkfifo to turn DuckDB into a RESTful API
 tags: ["Engineering"]
 ---
 

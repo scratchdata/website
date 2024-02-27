@@ -1,5 +1,44 @@
 {% extends "layout.html" %}
 
+{% block header %}
+
+<meta name="description" content="{{post.summary}}" />
+<meta property="og:title" content="{{post.title}}| Scratch Data" />
+<meta property="og:description" content="{{post.summary}}" />
+<meta property="og:url" content="{{url_for('blog_blueprint.blog_post', post=post.slug, _external=True)}}" />
+
+
+<meta property="og:image" content="{{url_for('blog_blueprint.blog_hero', post=post.slug, _external=True)}}" />
+<meta property="og:image:alt" content="{{post.title}} | Scratch Data" />
+<link rel="canonical" href="{{url_for('blog_blueprint.blog_post', post=post.slug, _external=True)}}" />
+<meta property="og:site_name" content="Scratch Data" />
+<meta property="og:type" content="website" />
+
+{#
+<meta name="robots" content="index,follow" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@knocklabs" />
+<meta name="twitter:creator" content="@knocklabs" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta charSet="utf-8" />
+<meta name="theme-color" content="#000" />
+<meta name="msapplication-TileColor" content="#000000" />
+<meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+<link rel="icon" href="/favicon/favicon-dark.svg" />
+<link rel="mask-icon" href="/favicon/favicon.svg" color="#000" />
+<link rel="preload" href="/fonts/open-sauce/OpenSauceOne-Bold.woff" as="woff" />
+<link rel="preload" href="/fonts/open-sauce/OpenSauceOne-Bold.woff2" as="woff2" />
+<link rel="preload" href="/fonts/open-sauce/OpenSauceOne-Medium.woff" as="woff" />
+<link rel="preload" href="/fonts/open-sauce/OpenSauceOne-Medium.woff2" as="woff2" />
+<link href="https://unpkg.com/prismjs@0.0.1/themes/prism-tomorrow.css" rel="stylesheet" />
+<meta name="next-head-count" content="29" />
+<link data-next-font="" rel="preconnect" href="/" crossorigin="anonymous" />
+#}
+
+{% endblock %}
+
+
 {% block content %}
 
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css"> -->
@@ -13,71 +52,17 @@
 
 <script>hljs.highlightAll();</script>
 
-<main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white ">
-    <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
-      <article class="prose mx-auto w-full max-w-6xl format format-sm sm:format-base lg:format-lg format-blue ">
-        <header class="mb-4 lg:mb-6 not-format">
-          <address class="flex items-center mb-6 not-italic">
-            <div class="inline-flex items-center mr-3 text-sm text-gray-900 ">
-              <div>
-                <!-- <a href="./index.html" rel="author" class="text-xl font-bold text-gray-900 ">ScratchDB</a> -->
-                <p class="text-base font-light text-gray-500 "><time pubdate datetime="{{post.date}}"
-                    title="{{post.date}}">{{post.date}}</time></p>
-              </div>
-            </div>
-          </address>
-          <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl ">
-            {{post.title}}
-            </h1>
-        </header>
 
+<div class="bg-white px-6 py-32 lg:px-8">
+  <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
 
-        {{post.html |safe }}
-<!-- 
-        <p class="text-2xl my-4">"ScratchDB automatically creates tables from our JSON."</p>
-        <p>(testing margins) Placeholder placeholder placeholder placeholder placeholder placeholder placeholder
-          placeholder placeholder
-          placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder
-          placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder placeholder
-          placeholder placeholder</p>
-        <p class="text-2xl my-4">"We never have to worry about provisioning server capacity again."</p>
-        <p>Placeholder</p>
-        <p class="lead mb-12"></p> -->
-      </article>
+    <div class="prose">
+      <h1>{{post.title}}</h1>
+    {{post.html |safe }}
     </div>
 
-    <br><br>
-    <section class="bg-white">
-      <div class="px-4 py-8 mx-auto text-center lg:py-16 lg:px-12 bg-blue-600 w-full shadow-xl ">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Get
-          Access</h2>
-        <p class="mb-8 font-light text-white md:text-lg lg:text-xl sm:px-16 xl:px-48 ">
-          Like what you read? We're applying all of these learnings to build 
-          ScratchDB. Let's chat!
-        </p>
-        <div class="flex w-fit mx-auto">
-          <form method="post" action="/signup" class="flex w-full max-w-sm lg:ml-auto">
-            <div class="relative w-full">
-              <label for="email" class="hidden mb-2 text-sm font-medium text-gray-900">Email
-                address</label>
-              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                </svg>
-              </div>
-              <input type="email" id="email" name="email"
-                class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-l-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Your email" required>
-            </div>
-            <button type="submit"
-              class="py-3 px-5 w-32 text-sm text-center text-white rounded-r-lg border cursor-pointer bg-blue-600 border-white-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300">Join
-              Beta</button>
-          </form>
-        </div>
-    </section>
+  </div>
+</div>
 
-  </main>
 
-  {% endblock %}
+{% endblock %}
