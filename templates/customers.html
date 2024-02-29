@@ -2,71 +2,64 @@
 
 {% block content %}
 
-<section class="bg-white">
-    <div class="px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:pt-20 lg:pb-12">
-      <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl">
-            Customers
-        </h2>
-        <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl">
-          How is ScratchDB being used today?
-        </p>
+<style>
+  img.desaturate{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: url(desaturate.svg#greyscale);
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    filter: brightness(0%);
+}
+</style>
+
+<div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-3">
+
+      <div class="bg-gray-400/5 p-8 sm:p-10">
+        <a href="/blog/embeddables/">
+        <img class="max-h-12 w-full object-contain desaturate" src="/blog/embeddables/embeddables.png" alt="Embeddables" width="158" height="48">
+        </a>
       </div>
 
-    </div>
-    <div class="bg-gray-100 mb-16 w-full ">
-      <div
-        class="w-fit py-5 grid grid-cols-1 text-center gap-y-8 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 mx-auto">
-        <div class="shadow w-72 p-10 mx-auto bg-white">
-          <div>
-            <img src="/blog/embeddables/embeddables.png">
-            <!-- <p class="font-bold text-3xl text-blue-600">CustomerLogo</p> -->
-          </div>
-          <div class="mt-5">
-            <a href="/blog/embeddables/" title="Embeddables"
-              class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
-              role="button">
-              See how
-            </a>
-          </div>
-        </div>
-        <!-- <div class="shadow w-72 p-10 px-0 mx-auto bg-white">
-          <div>
-            <p class="font-bold text-3xl text-black italic">AnotherLogo</p>
-          </div>
-          <div class="mt-5">
-            <a href="#" title=""
-              class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
-              role="button">
-              See how
-            </a>
-          </div>
-        </div> -->
-        <!-- <div class="shadow w-72 p-10 px-0 mx-auto bg-white">
-          <div>
-            <p class="font-bold text-3xl text-green-600">AThirdLogo</p>
-          </div>
-          <div class="mt-5">
-            <a href="#" title=""
-              class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
-              role="button">
-              See how
-            </a>
-          </div>
-        </div> -->
-        <!-- <div class="shadow w-72 p-10 px-0 mx-auto bg-white">
-          <div>
-            <p class="font-bold text-3xl text-pink-600">AFourthLogo</p>
-          </div>
-          <div class="mt-5">
-            <a href="#" title=""
-              class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
-              role="button">
-              See how
-            </a>
-          </div>
-        </div> -->
+      <div class="bg-gray-400/5 p-8 sm:p-10">
+        <a href="/blog/juniper/">
+        <img class="max-h-12 w-full object-contain desaturate" src="/blog/juniper/juniper.png" alt="Juniper" width="158" height="48">
+        </a>
       </div>
-  </section>
+
+      <div class="bg-gray-400/5 p-8 sm:p-10">
+        <a href="/blog/bilanc/">
+        <img class="max-h-12 w-full object-contain desaturate" src="/blog/bilanc/bilanc.webp" alt="Bilanc" width="158" height="48">
+        </a>
+      </div>
+
+      {#
+      <div class="bg-gray-400/5 p-6 sm:p-10">
+        <img class="max-h-12 w-full object-contain" src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48">
+      </div>
+      <div class="bg-gray-400/5 p-6 sm:p-10">
+        <img class="max-h-12 w-full object-contain" src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48">
+      </div>
+      <div class="bg-gray-400/5 p-6 sm:p-10">
+        <img class="max-h-12 w-full object-contain" src="https://tailwindui.com/img/logos/158x48/laravel-logo-gray-900.svg" alt="Laravel" width="158" height="48">
+      </div>
+      <div class="bg-gray-400/5 p-6 sm:p-10">
+        <img class="max-h-12 w-full object-contain" src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48">
+      </div>
+      <div class="bg-gray-400/5 p-6 sm:p-10">
+        <img class="max-h-12 w-full object-contain" src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48">
+      </div>
+      #}
+
+    </div>
+  </div>
+</div>
+
+
 
 {% endblock %}

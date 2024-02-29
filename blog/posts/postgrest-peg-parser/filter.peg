@@ -1,0 +1,17 @@
+package main
+
+type Postgrest Peg {
+}
+
+// Filter <- [a-z]+ '=' [a-z]+ '.' [a-z0-9]+ END
+
+Filter <- ColumnName '=' Predicate END
+Predicate <- Operator '.' Operand
+
+ColumnName <- String 
+Operator <- String 
+Operand <- String 
+
+String <- [a-z0-9]+
+
+END <- !.

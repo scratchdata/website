@@ -16,3 +16,4 @@ requests==2.31.0
 urllib3==2.0.4
 Werkzeug==2.3.7
 stripe==6.1.0
+pillow==10.2.0
