@@ -1,8 +1,8 @@
 ---
-date: 2023-10-03
-publishdate: 2023-10-03
-title: Embeddables + Scratch Data
-summary: ScratchDB Enhances Embeddables' Query Speed and Data Management
+date: 2024-03-02
+publishdate: 2024-03-02
+title: Juniper + Scratch Data
+summary: Scratch Data helps Juniper enrich their CRM
 tags: ["Customers"]
 ---
 

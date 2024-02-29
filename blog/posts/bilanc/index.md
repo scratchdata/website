@@ -1,8 +1,8 @@
 ---
-date: 2023-10-03
-publishdate: 2023-10-03
-title: Embeddables + Scratch Data
-summary: ScratchDB Enhances Embeddables' Query Speed and Data Management
+date: 2024-03-01
+publishdate: 2024-03-01
+title: Bilanc + Scratch Data
+summary: Scratch Data powers Bilanc's financial engine
 tags: ["Customers"]
 ---
 
