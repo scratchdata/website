@@ -44,6 +44,10 @@ def stripe_payment(stripe_customer_id):
 def index():
     return render_template("index.html")
 
+@app.get("/github")
+def github():
+    return redirect("https://www.github.com/scratchdata/scratchdb")
+
 @app.get("/docs")
 def docs():
     return render_template("docs.html")
