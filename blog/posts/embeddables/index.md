@@ -8,7 +8,7 @@ tags: ["Customers"]
 
 > ScratchDB helped us go from zero Clickhouse experience to a fully migrated and far superior analytics solution in next to no time at all. I’d thoroughly recommend their services, for small and large companies alike!
 
-- Jeremy Evans, Co-Founder + CTO at Embeddables
+- [Jeremy Evans](https://www.linkedin.com/in/jeremynevans/), Co-Founder + CTO at Embeddables
 
 ### Background:
 
