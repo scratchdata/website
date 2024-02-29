@@ -112,6 +112,8 @@ def blog_hero(post):
         (0x000000, 0xEB5757),
     ]
 
+    directions = ['horizontal']
+
     def _rgb(color_int):
         # Extract the Red component
         red = (color_int >> 16) & 0xFF
@@ -123,12 +125,13 @@ def blog_hero(post):
         return red, green, blue
 
     n = hash(post.title) % len(gradients)
+    direction = directions[hash(post.title) % len(directions)]
     gradient = gradients[n]
 
     c1 = _rgb(gradient[0])
     c2 = _rgb(gradient[1])
 
-    img = generate_social_hero(c1,c2,post.title)
+    img = generate_social_hero(c1,c2,post.title,direction)
     img_io = BytesIO()
     img.save(img_io, 'PNG')
     img_io.seek(0)
