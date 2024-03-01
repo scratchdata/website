@@ -11,7 +11,7 @@ tags: ["Customers"]
 - [Christophe Rimann](https://www.linkedin.com/in/christopherimann/), Co-Founder at Juniper 
 
 [Juniper](https://www.juniperplatform.com/) builds software for behavioral health clinicians to improve quality of care. 
-One of the tools they have to do this is health transparency data to identify ways to help clinitians.
+One of the tools they have to do this is health transparency data to identify ways to help clinicians.
 
 With Scratch Data, Juniper has been able to marry public health datasets with their CRM in order to
 surface these insights. And the integration took minutes: rather allocating an engineering sprint

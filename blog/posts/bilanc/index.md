@@ -10,8 +10,6 @@ tags: ["Customers"]
 
 - [Samuel Akinwunmi](https://www.linkedin.com/in/0x-s13i/), Co-Founder + CTO at Bilanc
 
-### Background:
-
 [Bilanc](https://www.bilanc.co/) helps companies measure and improve the profitability of their customers. 
 They bring finance and customer data together, assigning costs to every customer action. These granular insights can be used to optimize customer acquisition, costs and pricing, ultimately improving profitability.
 
