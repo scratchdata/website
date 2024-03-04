@@ -95,8 +95,8 @@ def get_wrapped_text(text: str, font: ImageFont.ImageFont,
 def generate_social_hero(color1, color2, text, direction='horizontal',width=1200, height=630,radius=30):
     gradient_img = create_gradient_rect((width, height), color1, color2,direction)
     # gradient_img = create_gradient_image(width, height, color1, color2)
-    rounded_img = add_rounded_corners(gradient_img, radius)
-    final_img = add_text(rounded_img, text,60)
+    # rounded_img = add_rounded_corners(gradient_img, radius)
+    final_img = add_text(gradient_img, text,60)
 
     logo = Image.open('static/logo_light.png', 'r')
     logo.thumbnail((500,200),Image.Resampling.LANCZOS)
