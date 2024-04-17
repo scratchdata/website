@@ -45,9 +45,7 @@ This bottleneck is typical in OLTP systems like Postgres when faced with extensi
 
 Realizing the need for a more efficient way to handle analytics, Alex discovers the realm of Online Analytical Processing (OLAP). Unlike OLTP, OLAP systems are designed for rapid query performance on large datasets, making them ideal for analytics. Alex decides to implement ClickHouse, an OLAP database that stores data in columns rather than rows.
 
-![](https://www.researchgate.net/publication/283644051/figure/fig6/AS:613545410588673@1523292033555/A-Comparison-with-Row-Oriented-and-Column-Oriented-Methods.png)
-
-8 A Comparison with Row-Oriented and Column-Oriented Methods | Download Scientific Diagram
+![](row_vs_column.png)
 
 This structural difference is crucial. In a columnar database, each column is stored independently, allowing for faster access during analytical queries that typically only involve a few attributes of the data. For instance, calculating the average execution time of the button press now requires accessing just the execution time column, significantly reducing the data loaded into memory.
 
