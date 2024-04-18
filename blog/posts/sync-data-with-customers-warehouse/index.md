@@ -7,13 +7,13 @@ tags: ["Launches"]
 ---
 
 Stripe has an enterprise [feature](https://stripe.com/data-pipeline) where they will, for
-the low low price of $0.03 per transaction, copy your financial data from
+the low, low price of $0.03 per transaction, copy your financial data from
 your hard-earned sales in your own database. Otherwise you have to figure out how to do 
 it yourself from their dashbaord.
 
 Enterprises are willing to pay for this because they already have a dashboard that has
 all their other business numbers and would rather pay an engineer to write LookML rather
-than give a lowly marketing manager access to Stripe.
+than give a anyones a Stripe login.
 
 What if you could also sell this to your enterprise customers? Now you can.
 **Scratch Data lets you connect to your customers' data warehouse.**
