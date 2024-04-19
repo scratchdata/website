@@ -13,7 +13,7 @@ it yourself from their dashbaord.
 
 Enterprises are willing to pay for this because they already have a dashboard that has
 all their other business numbers and would rather pay an engineer to write LookML rather
-than give a anyones a Stripe login.
+than give anyone a Stripe login.
 
 What if you could also sell this to your enterprise customers? Now you can.
 **Scratch Data lets you connect to your customers' data warehouse.**
